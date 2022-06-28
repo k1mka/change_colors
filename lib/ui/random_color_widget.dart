@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class RandomColorWidget extends StatefulWidget {
-  const RandomColorWidget({Key? key}) : super(key: key);
+  const RandomColorWidget({Key? key, required this.child}) : super(key: key);
+
+  final Widget child;
 
   @override
   State<RandomColorWidget> createState() => _RandomColorWidgetState();
@@ -32,6 +34,7 @@ class _RandomColorWidgetState extends State<RandomColorWidget> {
         width: 500.0,
         height: 1000.0,
         color: backgroundColor,
+        child: widget.child,
       ),
     );
   }

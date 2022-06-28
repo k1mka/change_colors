@@ -13,11 +13,10 @@ class ChangeColorsApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('colors app'),
         ),
-        body: Stack(
-          children: const [
-            RandomColorWidget(),
-            Center(child: HeyText()),
-          ],
+        body: const RandomColorWidget(
+          child: Center(
+            child: HeyText(),
+          ),
         ),
       ),
     );
