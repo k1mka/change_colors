@@ -10,12 +10,18 @@ class RandomColorWidget extends StatefulWidget {
 
 class _RandomColorWidgetState extends State<RandomColorWidget> {
   Color backgroundColor = Colors.green;
+  final random = Random();
+
+  Color generateColor() {
+    final randomNumber = random.nextInt(0xffffffff);
+    final randomColor = Color(randomNumber);
+    return randomColor;
+  }
 
   void updateColor() {
-    Random random = Random();
-    final randomNumber = random.nextInt(0xffffffff);
-    Color randomColor = Color(randomNumber);
-    setState(() => backgroundColor = randomColor);
+    setState(() {
+      backgroundColor = generateColor();
+    });
   }
 
   @override
