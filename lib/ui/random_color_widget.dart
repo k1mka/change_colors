@@ -30,11 +30,11 @@ class _RandomColorWidgetState extends State<RandomColorWidget> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: updateColor,
-      child: Container(
-        width: 500.0,
-        height: 1000.0,
-        color: backgroundColor,
-        child: widget.child,
+      child: Expanded(
+        child: Container(
+          color: backgroundColor,
+          child: widget.child,
+        ),
       ),
     );
   }
