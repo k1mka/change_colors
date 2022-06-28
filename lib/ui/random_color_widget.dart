@@ -1,5 +1,5 @@
+import 'package:change_colors/tools/color_generator.dart';
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 class RandomColorWidget extends StatefulWidget {
   const RandomColorWidget({Key? key, required this.child}) : super(key: key);
@@ -10,15 +10,9 @@ class RandomColorWidget extends StatefulWidget {
   State<RandomColorWidget> createState() => _RandomColorWidgetState();
 }
 
-class _RandomColorWidgetState extends State<RandomColorWidget> {
+class _RandomColorWidgetState extends State<RandomColorWidget>
+    with ColorGenerator {
   Color backgroundColor = Colors.green;
-  final random = Random();
-
-  Color generateColor() {
-    final randomNumber = random.nextInt(0xffffffff);
-    final randomColor = Color(randomNumber);
-    return randomColor;
-  }
 
   void updateColor() {
     setState(() {
