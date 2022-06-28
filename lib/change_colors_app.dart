@@ -1,4 +1,5 @@
 import 'package:change_colors/ui/hey_text.dart';
+import 'package:change_colors/ui/random_color_widget.dart';
 import 'package:flutter/material.dart';
 
 class ChangeColorsApp extends StatelessWidget {
@@ -7,15 +8,18 @@ class ChangeColorsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('colors app'),
         ),
-        body: const Center(
-          child: HeyText(),
+        body: Stack(
+          children: const [
+            RandomColorWidget(),
+            Center(child: HeyText()),
+          ],
         ),
       ),
-      theme: ThemeData(primarySwatch: Colors.blue),
     );
   }
 }
