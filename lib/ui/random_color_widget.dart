@@ -2,9 +2,9 @@ import 'package:change_colors/tools/color_generator.dart';
 import 'package:flutter/material.dart';
 
 class RandomColorWidget extends StatefulWidget {
-  const RandomColorWidget({Key? key, required this.child}) : super(key: key);
-
   final Widget child;
+
+  const RandomColorWidget({Key? key, required this.child}) : super(key: key);
 
   @override
   State<RandomColorWidget> createState() => _RandomColorWidgetState();

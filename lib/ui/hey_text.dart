@@ -2,8 +2,9 @@ import 'package:change_colors/tools/color_generator.dart';
 import 'package:flutter/material.dart';
 
 class HeyText extends StatefulWidget {
-  const HeyText({Key? key}) : super(key: key);
   static const text = 'Hey there';
+
+  const HeyText({Key? key}) : super(key: key);
 
   @override
   State<HeyText> createState() => _HeyTextState();
