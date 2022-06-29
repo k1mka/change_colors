@@ -11,6 +11,7 @@ class HeyText extends StatefulWidget {
 
 class _HeyTextState extends State<HeyText> with ColorGenerator {
   Color textColor = Colors.black;
+  static const heyThereSize = 68.0;
 
   void updateTextColor() {
     setState(() {
@@ -24,7 +25,7 @@ class _HeyTextState extends State<HeyText> with ColorGenerator {
       onTap: updateTextColor,
       child: Text(
         HeyText.text,
-        style: TextStyle(fontSize: 68.0, color: textColor),
+        style: TextStyle(fontSize: heyThereSize, color: textColor),
       ),
     );
   }
