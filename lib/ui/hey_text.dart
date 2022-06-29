@@ -1,9 +1,9 @@
 import 'package:change_colors/tools/color_generator.dart';
 import 'package:flutter/material.dart';
 
+/// widget that displays 'HeyText'
 class HeyText extends StatefulWidget {
-  static const text = 'Hey there';
-
+  /// default constructor
   const HeyText({Key? key}) : super(key: key);
 
   @override
@@ -13,6 +13,7 @@ class HeyText extends StatefulWidget {
 class _HeyTextState extends State<HeyText> with ColorGenerator {
   Color textColor = Colors.black;
   static const heyThereSize = 68.0;
+  static const text = 'Hey there';
 
   void updateTextColor() {
     setState(() {
@@ -25,7 +26,7 @@ class _HeyTextState extends State<HeyText> with ColorGenerator {
     return GestureDetector(
       onTap: updateTextColor,
       child: Text(
-        HeyText.text,
+        text,
         style: TextStyle(fontSize: heyThereSize, color: textColor),
       ),
     );

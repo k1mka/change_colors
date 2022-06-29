@@ -1,9 +1,12 @@
 import 'package:change_colors/tools/color_generator.dart';
 import 'package:flutter/material.dart';
 
+/// widget that displays random color after tup
 class RandomColorWidget extends StatefulWidget {
+  /// Widget`s child
   final Widget child;
 
+  /// default constructor
   const RandomColorWidget({Key? key, required this.child}) : super(key: key);
 
   @override
